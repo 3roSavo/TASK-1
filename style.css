@@ -1,0 +1,51 @@
+body {
+    margin: 30px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#container {
+    column-count: 2;
+    column-gap: 25px;
+}
+
+#container .item:nth-last-child(-n+3) {
+    display: none;
+    /* nascondo per migliorare la visibilità del layout gli ultimi 3 elementi e li "scopro" solo su layout lg */
+}
+
+.item {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+img {
+    width: 100%;
+}
+
+@media (min-width: 576px) {
+    #container {
+        column-count: 2;
+    }
+}
+
+@media (min-width: 767px) {
+    #container {
+        column-count: 3;
+    }
+}
+
+@media (min-width: 991px) {
+
+    #container {
+        column-count: 4;
+    }
+
+    #container .item:nth-last-child(-n+3) {
+        /* scopro gli elementi */
+        display: inline-block;
+    }
+}
