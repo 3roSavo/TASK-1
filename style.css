@@ -8,18 +8,18 @@ h1 {
 
 #container {
     column-count: 2;
-    column-gap: 25px;
+    column-gap: 15px;
 }
 
 #container .item:nth-last-child(-n+3) {
     display: none;
-    /* nascondo per migliorare la visibilità del layout gli ultimi 3 elementi e li "scopro" solo su layout lg */
+    /* nascondo per migliorare la visibilità del layout gli ultimi 3 elementi e li "scopro" solo su layout xl */
 }
 
 .item {
     display: inline-block;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 img {
@@ -28,17 +28,21 @@ img {
 
 @media (min-width: 576px) {
     #container {
-        column-count: 2;
+        column-gap: 25px;
+    }
+
+    .item {
+        margin-bottom: 20px;
     }
 }
 
-@media (min-width: 767px) {
+@media (min-width: 768px) {
     #container {
         column-count: 3;
     }
 }
 
-@media (min-width: 991px) {
+@media (min-width: 1200px) {
 
     #container {
         column-count: 4;
